@@ -1,0 +1,14 @@
+
+{
+    "region" : "us-east-2",
+    "configuration" : "Release",
+    "framework"     : "net7.0",
+    "self-contained" : true,
+    "application"    : "TestAPI",
+    "environment"    : "TestAPI-env",
+    "app-path"       : "/",
+    "iis-website"    : "Default Web Site",
+    "enable-xray"    : false,
+    "enhanced-health-type" : "enhanced",
+    "additional-options"   : ""
+}

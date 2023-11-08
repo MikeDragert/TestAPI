@@ -30,6 +30,17 @@ namespace TestAPI
             services.AddDbContext<PersonContext>(options => 
                 options.UseNpgsql(Configuration["ConnectionStrings:DefaultConnection"]));
             services.AddControllers();
+
+            services.AddCors(options =>
+                options.AddPolicy("AllowAll",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                    }
+                 )
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +55,8 @@ namespace TestAPI
 
             app.UseRouting();
 
+            app.UseCors("AllowAll");
+            
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -12,7 +12,7 @@ namespace TestAPI.Model
         public string LastName { get; set; }
         public string FavouriteColour { get; set; }
         public int NumberChildren { get; set; }
-        public int Counter { get; private set; }
+        public int Counter { get; set; }
 
         public Person() { }
 

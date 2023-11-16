@@ -207,7 +207,7 @@ namespace TestAPI.Controllers
         }
 
         // PUT api/<PersonController>/5
-        [HttpPut]
+        [HttpPut("UpdateById")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Person))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -246,7 +246,7 @@ namespace TestAPI.Controllers
         }
 
         // DELETE api/<PersonController>/5
-        [HttpDelete]
+        [HttpDelete("DeleteById")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
